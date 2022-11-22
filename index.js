@@ -1,6 +1,9 @@
 const nameInput = document.querySelector("#name");
 const ageInput = document.querySelector("#age");
 const savingsInput = document.querySelector("#savings");
+const rentInput = document.querySelector("#rent");
+const foodInput = document.querySelector("#food");
+const utilitiesInput = document.querySelector("#utilities");
 const insuranceInput = document.querySelector("#insurance");
 
 const budgetTableContainer = document.querySelector(".budget-table");
@@ -8,7 +11,13 @@ const table = document.querySelector(".table");
 const button = document.querySelector(".btn");
 const resetButton = document.querySelector(".btn-reset");
 
-
+const categories = [
+  savingsInput,
+  rentInput,
+  foodInput,
+  utilitiesInput,
+  insuranceInput,
+];
 
 function computeSum(array) {
   let sum = 0;
@@ -48,12 +57,14 @@ function displayRow(data) {
 
   let column2 = document.createElement("td");
 
-  const column2text = document.createTextNode(`${data.amount}`);
+  const column2text = document.createTextNode(
+    `${data.amount.toLocaleString()}`
+  );
   column2.appendChild(column2text);
 
   let column3 = document.createElement("td");
 
-  const column3text = document.createTextNode(`${data.percentage}`);
+  const column3text = document.createTextNode(`${data.percentage}%`);
   column3.appendChild(column3text);
 
   //appends the first column to the new row
@@ -68,12 +79,12 @@ function displayRow(data) {
   table.appendChild(row);
 }
 
-
+function resetForm() {
+  categories.forEach((el) => (el.value = ""));
+}
 
 button.addEventListener("click", function (e) {
   e.preventDefault();
-
-  const categories = [savingsInput, insuranceInput];
 
   // compute sum of budget categories
   const sum = computeSum(categories);
@@ -87,9 +98,12 @@ button.addEventListener("click", function (e) {
   data.forEach((el) => {
     displayRow(el);
   });
+
+  resetForm();
 });
 
 resetButton.addEventListener("click", function (e) {
   e.preventDefault();
+  // resetForm();
   budgetTableContainer.style.display = "none";
 });
