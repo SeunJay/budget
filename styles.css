@@ -114,7 +114,8 @@ label {
 }
 
 .btn-reset {
-  background: #cf622b;
+  background: #e11212;
+  width: 100%;
 }
 
 /* budget table styles */
@@ -131,6 +132,7 @@ label {
 .table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 10px;
 }
 
 .table th {
@@ -154,4 +156,9 @@ label {
 
 .table tr:hover {
   background-color: #ddd;
+}
+
+.reset-btn-container {
+  width: 40%;
+  margin-inline: auto;
 }

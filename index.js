@@ -6,7 +6,7 @@ const insuranceInput = document.querySelector("#insurance");
 const budgetTableContainer = document.querySelector(".budget-table");
 const table = document.querySelector(".table");
 const button = document.querySelector(".btn");
-// const resetButton = document.querySelector(".btn-reset");
+const resetButton = document.querySelector(".btn-reset");
 
 
 
@@ -89,7 +89,7 @@ button.addEventListener("click", function (e) {
   });
 });
 
-// resetButton.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   budgetTableContainer.style.display = "none";
-// });
+resetButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  budgetTableContainer.style.display = "none";
+});
