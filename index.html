@@ -19,30 +19,57 @@
                         <label for="name" class="form__label">Name</label>
                     </div>
                     <div class="form-control">
-                        <input id="age" type="text" placeholder="" class="form__input" required>
+                        <input id="age" type="number" placeholder="" class="form__input" min="1" step="1" required>
                         <label for="age" class="form__label">Age</label>
                     </div>
                     <div class="form-control">
-                        <input id="savings" type="text" placeholder="" class="form__input" required>
+                        <input id="savings" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
                         <label for="savings" class="form__label">Savings</label>
                     </div>
                     <div class="form-control">
-                        <input id="rent" type="text" placeholder="" class="form__input" required>
+                        <input id="rent" type="number" placeholder="" class="form__input" min="0" step="1000" required>
                         <label for="rent" class="form__label">Rent</label>
                     </div>
                     <div class="form-control">
-                        <input id="food" type="text" placeholder="" class="form__input" required>
+                        <input id="food" type="number" placeholder="" class="form__input" min="0" step="1000" required>
                         <label for="food" class="form__label">Food</label>
                     </div>
                     <div class="form-control">
-                        <input id="utilities" type="text" placeholder="" class="form__input" required>
+                        <input id="clothing" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
+                        <label for="clothing" class="form__label">clothing</label>
+                    </div>
+                    <div class="form-control">
+                        <input id="utilities" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
                         <label for="utilities" class="form__label">utilities</label>
                     </div>
                     <div class="form-control">
-                        <input id="insurance" type="text" placeholder="" class="form__input" required>
+                        <input id="insurance" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
                         <label for="insurance" class="form__label">Insurance</label>
                     </div>
-
+                    <div class="form-control">
+                        <input id="transportation" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
+                        <label for="transportation" class="form__label">Transportation</label>
+                    </div>
+                    <div class="form-control">
+                        <input id="healthcare" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
+                        <label for="healthcare" class="form__label">Health care</label>
+                    </div>
+                    <div class="form-control">
+                        <input id="recreation" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
+                        <label for="recreation" class="form__label">Recreation</label>
+                    </div>
+                    <div class="form-control">
+                        <input id="miscellaneous" type="number" placeholder="" class="form__input" min="0" step="1000"
+                            required>
+                        <label for="miscellaneous" class="form__label">Miscellaneous</label>
+                    </div>
                     <button class="btn">Submit</button>
                 </form>
 
@@ -53,7 +80,7 @@
                 <table class="table">
                     <tr>
                         <th>Category</th>
-                        <th>Amount</th>
+                        <th>Amount &#8358;</th>
                         <th>Percentage</th>
                     </tr>
                 </table>

@@ -3,8 +3,13 @@ const ageInput = document.querySelector("#age");
 const savingsInput = document.querySelector("#savings");
 const rentInput = document.querySelector("#rent");
 const foodInput = document.querySelector("#food");
+const clothingInput = document.querySelector("#clothing");
 const utilitiesInput = document.querySelector("#utilities");
 const insuranceInput = document.querySelector("#insurance");
+const transportationInput = document.querySelector("#transportation");
+const healthcareInput = document.querySelector("#healthcare");
+const recreationInput = document.querySelector("#recreation");
+const miscellaneousInput = document.querySelector("#miscellaneous");
 
 const budgetTableContainer = document.querySelector(".budget-table");
 const table = document.querySelector(".table");
@@ -15,8 +20,13 @@ const categories = [
   savingsInput,
   rentInput,
   foodInput,
+  clothingInput,
   utilitiesInput,
   insuranceInput,
+  transportationInput,
+  healthcareInput,
+  recreationInput,
+  miscellaneousInput,
 ];
 
 function computeSum(array) {
@@ -80,6 +90,8 @@ function displayRow(data) {
 }
 
 function resetForm() {
+  nameInput.value = "";
+  ageInput.value = "";
   categories.forEach((el) => (el.value = ""));
 }
 
